@@ -1,0 +1,513 @@
+/* ==========================================================================
+	Contains main css code
+	@Author: Yura Heiko
+   ========================================================================== */
+
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+#top-header {
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    background: #5a5e88;;
+}
+
+.logo-wrapper {
+    width: 80px;
+    height: 75px;
+}
+
+#header #top-header .logo-wrapper {
+    float: right;
+}
+
+.other-page #top-header .logo-wrapper {
+    animation-name: spin;
+    animation-duration: 1.5s;
+}
+
+.other-page #header #top-header {
+    animation-name: color_change;
+    animation-duration: 2s;
+    background: #FFFFFF;
+    animation-fill-mode: forwards;
+}
+
+@keyframes color_change {
+    from {
+        background-color: #FFFFFF;
+    }
+    to {
+        background-color: #5a5e88;;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#header #top-header .main-menu {
+    float: left;
+    margin-top: 22px;
+}
+
+#header #top-header .main-menu #mob-trigger {
+    display: none;
+}
+
+#header #top-header .main-menu nav {
+    float: left;
+    margin-right: 10px;
+}
+
+#header #top-header .main-menu ul li {
+    display: inline-block;
+}
+
+#header #top-header .main-menu ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #DDDDDD;
+    padding: 0 15px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    display: block;
+}
+
+#header #top-header .main-menu ul li a:before {
+    display: block;
+    content: '';
+    border-top: 3px solid blue;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    padding-top: 5px;
+}
+
+#header #top-header .main-menu ul li a:hover:before,
+#header #top-header .main-menu ul li a:focus:before,
+#header #top-header .main-menu ul li a.active:before {
+    transform: scaleX(1);
+}
+
+#header #top-header .main-menu ul .menu-item-has-children {
+    position: relative;
+}
+
+#header #top-header .main-menu ul .menu-item-has-children .sub-menu {
+    position: absolute;
+    visibility: hidden;
+    background: #5a5e88;;
+    top: 20px;
+    z-index: 100;
+    left: 2px;
+    width: 140px;
+}
+
+#header #top-header .main-menu ul .menu-item-has-children:hover > .sub-menu {
+    visibility: visible;
+}
+
+#header #top-header .main-menu ul .menu-item-has-children .sub-menu li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#header #top-header .main-menu ul .menu-item-has-children .sub-menu li a {
+    display: block;
+    padding: 10px 13px;
+}
+
+#header #top-header .main-menu ul .menu-item-has-children .sub-menu li a:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+#header #top-header .main-menu ul .menu-item-has-children .sub-menu li a:before {
+    border: none;
+}
+
+#header #banner {
+    background: url("../img/header_BG.jpg") no-repeat;
+    background-position: center;
+    min-height: 500px;
+    background-size: cover;
+}
+
+#main section {
+    padding: 30px 10px;
+}
+
+#main section#last-win {
+    padding-top: inherit;
+}
+
+#main section .section-title {
+    text-align: center;
+
+}
+
+#main section .text p {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+#footer {
+    padding: 15px 0;
+    background: #5a5e88;;
+}
+
+.other-page #footer {
+    animation-name: color_change;
+    animation-duration: 2s;
+    background: #FFFFFF;
+    animation-fill-mode: forwards;
+}
+
+#footer #copyright {
+    text-align: center;
+}
+
+#footer #copyright a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+#footer #copyright a:hover {
+    text-decoration: underline;
+}
+
+body.other-page {
+    position: inherit;
+}
+
+.other-page #header #top-header {
+    position: inherit;
+}
+
+.other-page #header #top-header .main-menu {
+    margin-left: -23px;
+}
+
+.other-page #main #last-news #main-news {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.other-page #main #last-news #main-news .news-item {
+    vertical-align: top;
+    width: 250px;
+    display: inline-block;
+    margin: 0 15px 15px;
+}
+
+.other-page #main #last-news #main-news .news-item .news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.other-page #main #main-contacts,
+.other-page #main #main-messages,
+.other-page #main .admin-content {
+    margin-top: 40px;
+}
+
+.other-page #main #contact-info aside {
+    float: left;
+    padding: 10px;
+    height: 350px;
+    width: 350px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.other-page #main #contact-info aside .title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.other-page #main #contact-info #map {
+    float: right;
+    width: 650px;
+    height: 350px;
+}
+
+.other-page #main #contact-info #map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.other-page #main #main-messages .some-message {
+    display: block;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #000000;
+}
+
+.other-page #main #main-messages .some-message .text {
+    margin-bottom: 15px;
+}
+
+.other-page #main #main-messages .some-message .date {
+    float: left;
+}
+
+.other-page #main #main-messages .some-message .author {
+    float: right;
+    font-weight: bold;
+}
+
+.other-page #main #send-message {
+    margin-top: 20px;
+}
+
+.other-page #main #send-message textarea {
+    float: left;
+    resize: none;
+    outline: none;
+    min-height: 120px;
+    width: 800px;
+    padding: 10px;
+}
+
+.other-page #main #send-message input[type=submit] {
+    float: right;
+    margin-top: -50px;
+    width: 200px;
+    height: 50px;
+    margin-right: 80px;
+}
+
+.other-page #main #admin .some-image {
+    float: left;
+    width: 550px;
+    height: 150px;
+    background: gainsboro;
+}
+
+.other-page #main #admin input,
+.other-page #main #admin textarea {
+    outline: none;
+    float: left;
+    width: 550px;
+    box-sizing: border-box;
+}
+
+.other-page #main #admin textarea {
+    min-height: 120px;
+    resize: none;
+    margin-top: 10px;
+}
+
+.other-page #main #admin input[type=submit] {
+    float: left;
+    width: 200px;
+    height: 50px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.other-page #footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 1169px) {
+    .container {
+        width: 100%;
+    }
+
+    #top-header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .other-page #top-header {
+        width: inherit;
+    }
+
+    #header #top-header .logo-wrapper {
+        float: none;
+        margin: 0 auto 10px;
+    }
+
+    #header #top-header .main-menu {
+        float: none;
+        margin-top: 0;
+    }
+
+    .other-page #header #top-header .main-menu {
+        margin-left: inherit;
+    }
+
+    #header #top-header .main-menu #mob-trigger {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 21px;
+        line-height: 44px;
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+
+    #header #top-header .main-menu nav {
+        float: none;
+        margin-right: inherit;
+        display: none;
+    }
+
+    #header #top-header .main-menu ul li {
+        display: block;
+    }
+
+    #header #top-header .main-menu ul li a:before {
+        border: none;
+    }
+
+    #header #top-header .main-menu ul .menu-item-has-children .sub-menu {
+        display: block;
+        position: relative;
+        top: 100%;
+        visibility: visible;
+        width: inherit;
+    }
+
+    #header #top-header .main-menu ul .menu-item-has-children .sub-menu li a {
+        font-size: 9px;
+    }
+
+    #header #top-header .main-menu ul li a {
+        padding: 10px 0;
+        margin: inherit;
+        font-size: 14px;
+    }
+
+    #header #top-header .main-menu ul li a:hover {
+        background: none;
+        text-decoration: underline;
+    }
+
+    #footer {
+        padding: 10px;
+    }
+
+    .other-page #main #last-news #main-news,
+    .other-page #main #main-messages {
+        margin-top: 30px;
+    }
+
+    .other-page #main #contact-info #main-contacts {
+        margin-top: 30px;
+    }
+
+    .other-page #main #contact-info aside {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 510px;
+    }
+
+    .other-page #main #contact-info #map {
+        float: none;
+        margin: 20px auto 0;
+        text-align: center;
+        width: 100%;
+        max-width: 510px;
+    }
+
+    .other-page #main #send-message {
+        text-align: center;
+    }
+
+    .other-page #main #send-message textarea {
+        float: none;
+        width: 100%;
+        max-width: 510px;
+        padding: inherit;
+    }
+
+    .other-page #main #send-message input[type=submit] {
+        float: none;
+        margin: inherit;
+    }
+
+    .other-page #main #admin .some-image {
+        float: none;
+        max-width: 510px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .other-page #main #admin input, .other-page #main #admin .admin-content {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .other-page #main #admin input[type=text], .other-page #main #admin textarea {
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .other-page #main #admin input[type=submit] {
+        float: none;
+        margin: inherit !important;
+    }
+
+    .other-page #footer {
+        position: inherit;
+        width: inherit;
+    }
+
+}
+
+.clearfix:before,
+.col:before,
+.clearfix:after,
+.col:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after,
+.col:after {
+    clear: both;
+}
