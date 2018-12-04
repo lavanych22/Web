@@ -1,0 +1,25 @@
+CACHE MANIFEST
+#ver 1.03
+index.html
+admin.html
+contact.html
+fans.html
+news.html
+matches.html
+
+css/main.css
+css/normalize.css
+
+img/header_BG.jpg
+img/logo.png
+img/menu-hover.png
+img/news.jpg
+
+js/main.js
+js/jquery.min.js
+
+FALLBACK:
+. error.html
+
+NETWORK:
+*

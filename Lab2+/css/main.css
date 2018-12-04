@@ -315,7 +315,6 @@ body.other-page {
 }
 
 .other-page #main #admin textarea {
-    min-height: 120px;
     resize: none;
     margin-top: 10px;
 }
@@ -498,6 +497,21 @@ tr:nth-child(even) {
     }
 
 }
+
+.input-form {
+    display: flex;
+}
+ #newsForm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ #addPicture {
+    float: right;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    z-index: 20;
+}
+
 
 .clearfix:before,
 .col:before,

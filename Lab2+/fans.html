@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="manifest.appcache">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,7 +77,7 @@
                             versions of Lorem Ipsum.</p>
                     </div>
                     <div class="date">10.10.2018, 20:44</div>
-                    <div class="author">Swimming Fan</div>
+                    <div class="author">Formula1 Fan</div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="some-message">
@@ -91,19 +91,19 @@
                             versions of Lorem Ipsum.</p>
                     </div>
                     <div class="date">10.10.2018, 20:44</div>
-                    <div class="author">Swimming Fan</div>
+                    <div class="author">Formula1 Fan</div>
                     <div class="clearfix"></div>
                 </div>
             </div>
             <div id="send-message">
-                <textarea placeholder="Leave your message"></textarea>
+                <textarea id="fan-message" placeholder="Leave your message" required></textarea>
                 <div class="clearfix"></div>
-                <input type="submit" value="Send">
+                <input id="message-submit" type="submit" value="Send">
             </div>
         </div>
     </section>
 </main>
-<footer id="footer">
+<footer id="footer" style="position: relative; bottom: -15px">
     <div id="copyright">
         <a href="" target="_blank">Internet Advertising and Website Design</a>
     </div>
